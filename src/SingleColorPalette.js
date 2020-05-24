@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import PaletteFooter from './PaletteFooter';
 import { withStyles } from '@material-ui/styles'
 import { Link } from '@material-ui/core';
-import classes from '*.module.css';
 
 const styles = {
     Palette: {
@@ -82,6 +81,8 @@ class SingleColorPalette extends Component {
     render() {
         const {format} = this.state;
         const { paletteName, emoji, id } = this.props.palette;
+        const { classes } = this.props;
+        
         this.colorBoxes = this._shades.map(color => (
             <ColorBox 
                 key={color.name} 
