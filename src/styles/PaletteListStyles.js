@@ -1,7 +1,7 @@
 export default {
     root: {
         backgroundColor: 'blue',
-        height: '100vh',
+        height: '150vh',
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'center'
