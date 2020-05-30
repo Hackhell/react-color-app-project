@@ -128,6 +128,9 @@ export default {
             marginBottom: '0',
             padding: '1rem',
             textTransform: 'uppercase',
+            [sizes.down("sm")]: {
+                fontSize: "6rem"
+              }
         },
 
         '& p': {
