@@ -17,7 +17,7 @@ class PaletteList extends Component {
                 
                 <nav className={classes.nav}>
                 
-                <h1>React Colors</h1>
+                <h1 className={classes.heading}>React Colors</h1>
                 <Link to='/palette/new'>Create Palette</Link>
 
                 </nav>
