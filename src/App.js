@@ -8,7 +8,6 @@ import Page from "./Page";
 import NewPaletteForm from "./NewPaletteForm";
 import seedColors from "./seedColors";
 import { generatePalette } from "./colorHelpers";
-import './App.css';
 
 class App extends Component {
   constructor(props) {
