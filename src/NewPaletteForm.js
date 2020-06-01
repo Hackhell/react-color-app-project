@@ -46,17 +46,14 @@ class NewPaletteForm extends Component {
       newColorName: ""
     });
   }
-
   handleChange(evt) {
     this.setState({
       [evt.target.name]: evt.target.value
     });
   }
-
   clearColors() {
     this.setState({ colors: [] });
   }
-
   addRandomColor() {
     const allColors = this.props.palettes.map(p => p.colors).flat();
     let rand;
@@ -71,20 +68,17 @@ class NewPaletteForm extends Component {
     }
     this.setState({ colors: [...this.state.colors, randomColor] });
   }
-  
   handleSubmit(newPalette) {
     newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, "-");
     newPalette.colors = this.state.colors;
     this.props.savePalette(newPalette);
     this.props.history.push("/");
   }
-  
   removeColor(colorName) {
     this.setState({
       colors: this.state.colors.filter(color => color.name !== colorName)
     });
   }
-  
   onSortEnd = ({ oldIndex, newIndex }) => {
     this.setState(({ colors }) => ({
       colors: arrayMove(colors, oldIndex, newIndex)
@@ -123,7 +117,6 @@ class NewPaletteForm extends Component {
             <Typography variant='h4' gutterBottom>
               Design Your Palette
             </Typography>
-         
             <div className={classes.buttons}>
               <Button
                 variant='contained'
@@ -133,7 +126,6 @@ class NewPaletteForm extends Component {
               >
                 Clear Palette
               </Button>
-         
               <Button
                 variant='contained'
                 className={classes.button}
@@ -144,7 +136,6 @@ class NewPaletteForm extends Component {
                 Random Color
               </Button>
             </div>
-         
             <ColorPickerForm
               paletteIsFull={paletteIsFull}
               addNewColor={this.addNewColor}
@@ -158,7 +149,6 @@ class NewPaletteForm extends Component {
           })}
         >
           <div className={classes.drawerHeader} />
-         
           <DraggableColorList
             colors={colors}
             removeColor={this.removeColor}

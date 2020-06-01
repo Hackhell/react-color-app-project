@@ -40,9 +40,7 @@ class PaletteFormNav extends Component {
       handleSubmit,
       handleDrawerOpen
     } = this.props;
-    
     const { formShowing } = this.state;
-
     return (
       <div className={classes.root}>
         <CssBaseline />

@@ -27,7 +27,6 @@ const styles = {
       height: "5%"
     }
   },
-  
   boxContent: {
     position: "absolute",
     width: "100%",
